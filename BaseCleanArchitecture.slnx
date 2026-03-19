@@ -1,0 +1,12 @@
+<Solution>
+    <Folder Name="/API/">
+        <Project Path="API/BaseCleanArchitecture.Api/BaseCleanArchitecture.Api.csproj" />
+    </Folder>
+    <Folder Name="/Core/">
+        <Project Path="Core/BaseCleanArchitecture.Application/BaseCleanArchitecture.Application.csproj" />
+        <Project Path="Core/BaseCleanArchitecture.Domain/BaseCleanArchitecture.Domain.csproj" />
+    </Folder>
+    <Folder Name="/Infrastructure/">
+        <Project Path="Infrastructure/BaseCleanArchitecture.Persistence/BaseCleanArchitecture.Persistence.csproj" />
+    </Folder>
+</Solution>
