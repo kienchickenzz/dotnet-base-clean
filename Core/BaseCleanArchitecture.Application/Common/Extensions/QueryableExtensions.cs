@@ -7,7 +7,6 @@
 namespace BaseCleanArchitecture.Application.Common.Extensions;
 
 using System.Linq.Expressions;
-
 using Microsoft.EntityFrameworkCore;
 
 using BaseCleanArchitecture.Application.Common.Models;

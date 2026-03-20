@@ -1,5 +1,14 @@
-namespace BaseCleanArchitecture.Api.Features.V1.Products.Commands.DeleteProduct;
+namespace BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct;
+
+using Asp.Versioning;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+
+using BaseCleanArchitecture.Application.Common.Exceptions;
+using BaseCleanArchitecture.Application.Common.Models;
+using BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct;
 using BaseCleanArchitecture.Application.Features.V1.Products.Commands.UpdateProduct;
+using BaseCleanArchitecture.Application.Features.V1.Products.Commands.DeleteProduct;
 using BaseCleanArchitecture.Application.Features.V1.Products.Models.Responses;
 using BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProductById;
 using BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts;

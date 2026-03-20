@@ -1,38 +1,38 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>BaseCleanArchitecture.Web</name>
+        <name>BaseCleanArchitecture.Api</name>
     </assembly>
     <members>
-        <member name="M:BaseCleanArchitecture.Web.Controllers.V1.Products.ProductController.GetProductPaginated(BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts.GetProductsQuery)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct.ProductController.GetProductPaginated(BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts.GetProductsQuery)">
             <summary>
             Get the paginated product list
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Web.Controllers.V1.Products.ProductController.GetProductById(System.Int32)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct.ProductController.GetProductById(System.Int32)">
             <summary>
             Get product by id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Web.Controllers.V1.Products.ProductController.CreateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct.CreateProductCommand)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct.ProductController.CreateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct.CreateProductCommand)">
             <summary>
             Create product
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Web.Controllers.V1.Products.ProductController.UpdateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.UpdateProduct.UpdateProductCommand)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct.ProductController.UpdateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.UpdateProduct.UpdateProductCommand)">
             <summary>
             Update product
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Web.Controllers.V1.Products.ProductController.DeleteProduct(System.Int32)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct.ProductController.DeleteProduct(System.Int32)">
             <summary>
             Delete product
             </summary>
