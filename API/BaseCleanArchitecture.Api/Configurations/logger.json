@@ -3,10 +3,10 @@
         "Serilog": {
             "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
             "MinimumLevel": {
-                "Default": "Error",
+                "Default": "Information",
                 "Override": {
-                    "Microsoft": "Error",
-                    "System": "Error"
+                    "Microsoft": "Warning",
+                    "System": "Warning"
                 }
             },
             "WriteTo": [

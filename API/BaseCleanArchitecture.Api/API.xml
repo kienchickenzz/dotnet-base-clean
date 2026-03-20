@@ -40,5 +40,26 @@
             <returns></returns>
             <exception cref="T:BaseCleanArchitecture.Application.Common.Exceptions.BadRequestException"></exception>
         </member>
+        <member name="T:BaseCleanArchitecture.Api.Extensions.SerilogExtensions">
+            <summary>
+            Extension methods for configuring Serilog logging.
+            </summary>
+        </member>
+        <member name="F:BaseCleanArchitecture.Api.Extensions.SerilogExtensions.DefaultSectionName">
+            <summary>
+            Default configuration section name for logger settings.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Extensions.SerilogExtensions.UseSerilogFromSettings(Microsoft.Extensions.Hosting.IHostBuilder,System.String)">
+            <summary>
+            Configures Serilog using settings from the specified configuration section.
+            </summary>
+            <param name="host">The host builder instance.</param>
+            <param name="sectionName">
+            The configuration section name containing Serilog settings.
+            Defaults to "LoggerSettings".
+            </param>
+            <returns>The configured host builder for chaining.</returns>
+        </member>
     </members>
 </doc>

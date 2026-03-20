@@ -17,6 +17,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
 
 builder.AddConfigurations();
+builder.Host.UseSerilogFromSettings();
+
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 builder.Services.AddApiServices();
 builder.Services.AddApplication();
