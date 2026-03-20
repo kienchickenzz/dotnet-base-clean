@@ -1,4 +1,4 @@
-namespace BaseCleanArchitecture.Api.Controllers.Features.V1.Products.Commands.DeleteProduct;
+namespace BaseCleanArchitecture.Api.Controllers.Features.V1.Products;
 
 using Asp.Versioning;
 using MediatR;
