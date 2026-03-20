@@ -23,22 +23,20 @@ builder.Services.AddApplication();
 
 builder.Services.AddInfrastructurePersistence(builder.Configuration);
 
-builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
 // Initialize database (migrate + seed)
 await app.Services.InitializeDatabaseAsync();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwaggerExtension();
+// }
 
 app.UseSwaggerExtension();
 
+app.UseRouting();
 // app.UseHttpsRedirection(); // Disable for dev
 
 app.UseAuthorization();

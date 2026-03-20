@@ -44,4 +44,3 @@ internal sealed class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGe
         return openApiInfo;
     }
 }
-
