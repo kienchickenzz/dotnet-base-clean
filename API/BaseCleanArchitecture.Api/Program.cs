@@ -46,5 +46,19 @@ app.MapControllers();
 
 app.UseCustomExceptionHandler();
 
+app.Lifetime.ApplicationStarted.Register(() =>
+{
+    var logger = app.Services.GetRequiredService<ILogger<Program>>();
+    var urls = string.Join(", ", app.Urls);
+    logger.LogInformation("----------");
+    logger.LogInformation("Application started successfully!");
+    logger.LogInformation("Environment: {Environment}", app.Environment.EnvironmentName);
+    logger.LogInformation("Listening on: {Urls}", urls);
+    logger.LogInformation("Swagger UI: {Urls}/swagger", app.Urls.FirstOrDefault());
+    logger.LogInformation("----------");
+});
 
 app.Run();
+
+
+public partial class Program { }
