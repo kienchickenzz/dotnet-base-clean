@@ -1,5 +1,6 @@
 ﻿namespace BaseCleanArchitecture.Domain.Common;
 
+
 public interface IAggregateRoot
 {
 }
