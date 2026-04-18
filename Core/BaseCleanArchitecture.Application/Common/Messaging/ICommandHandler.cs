@@ -2,7 +2,7 @@
 
 using MediatR;
 
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
 public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>

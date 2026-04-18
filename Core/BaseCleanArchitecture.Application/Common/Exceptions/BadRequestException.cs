@@ -2,7 +2,7 @@
 
 using System.Net;
 
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
 public class BadRequestException : DomainException

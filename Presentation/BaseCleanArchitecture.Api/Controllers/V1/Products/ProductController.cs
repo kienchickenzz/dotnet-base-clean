@@ -4,15 +4,17 @@ using Asp.Versioning;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
+using BaseCleanArchitecture.Domain.Primitives;
+
 using BaseCleanArchitecture.Application.Common.Exceptions;
 using BaseCleanArchitecture.Application.Common.Models;
+
 using BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct;
 using BaseCleanArchitecture.Application.Features.V1.Products.Commands.UpdateProduct;
 using BaseCleanArchitecture.Application.Features.V1.Products.Commands.DeleteProduct;
 using BaseCleanArchitecture.Application.Features.V1.Products.Models.Responses;
 using BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProductById;
 using BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts;
-using BaseCleanArchitecture.Domain.Common;
 
 
 [ApiVersion(1)]
@@ -43,7 +45,7 @@ public class ProductController : BaseApiController
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(Result<ProductResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetProductById(int id)
+    public async Task<IActionResult> GetProductById(Guid id)
     {
         var result = await Sender.Send(new GetProductByIdQuery(id));
 
@@ -94,8 +96,8 @@ public class ProductController : BaseApiController
     /// <returns></returns>
     /// <exception cref="BadRequestException"></exception>
     [HttpDelete("{id}")]
-    [ProducesResponseType(typeof(Result<int>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> DeleteProduct(int id)
+    [ProducesResponseType(typeof(Result<Guid>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> DeleteProduct(Guid id)
     {
         var result = await Sender.Send(new DeleteProductCommand(id));
 

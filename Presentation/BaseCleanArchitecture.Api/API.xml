@@ -11,7 +11,7 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.GetProductById(System.Int32)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.GetProductById(System.Guid)">
             <summary>
             Get product by id
             </summary>
@@ -32,7 +32,7 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.DeleteProduct(System.Int32)">
+        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.DeleteProduct(System.Guid)">
             <summary>
             Delete product
             </summary>

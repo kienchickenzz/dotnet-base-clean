@@ -4,4 +4,4 @@ using BaseCleanArchitecture.Application.Common.Messaging;
 using BaseCleanArchitecture.Application.Features.V1.Products.Models.Responses;
 
 
-public sealed record GetProductByIdQuery(int Id) : IQuery<ProductResponse>;
+public sealed record GetProductByIdQuery(Guid Id) : IQuery<ProductResponse>;

@@ -1,9 +1,12 @@
 ﻿namespace BaseCleanArchitecture.Persistence.DatabaseContext;
 
+using BaseCleanArchitecture.Domain.Primitives;
+using BaseCleanArchitecture.Domain.Abstractions;
+using BaseCleanArchitecture.Domain.AggregatesModels.Products;
+
 using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
 using BaseCleanArchitecture.Application.Common.Exceptions;
-using BaseCleanArchitecture.Domain.AggregatesModels.Products;
-using BaseCleanArchitecture.Domain.Common;
+
 using BaseCleanArchitecture.Persistence.Extentions;
 
 using Microsoft.EntityFrameworkCore;

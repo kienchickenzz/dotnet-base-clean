@@ -6,8 +6,10 @@
  */
 namespace BaseCleanArchitecture.Persistence.Repositories;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
 using BaseCleanArchitecture.Domain.AggregatesModels.Products;
+
+using BaseCleanArchitecture.Application.Common.ApplicationServices.Repositories;
+
 using BaseCleanArchitecture.Persistence.Common;
 using BaseCleanArchitecture.Persistence.DatabaseContext;
 

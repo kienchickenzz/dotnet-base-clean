@@ -6,13 +6,13 @@
  */
 namespace BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.Repositories;
 using BaseCleanArchitecture.Application.Common.Extensions;
 using BaseCleanArchitecture.Application.Common.Messaging;
 using BaseCleanArchitecture.Application.Common.Models;
 using BaseCleanArchitecture.Application.Features.V1.Products.Extensions;
 using BaseCleanArchitecture.Application.Features.V1.Products.Models.Responses;
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
 public sealed class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, PaginationResponse<ProductResponse>>

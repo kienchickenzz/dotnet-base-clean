@@ -3,4 +3,4 @@
 using BaseCleanArchitecture.Application.Common.Messaging;
 
 
-public sealed record DeleteProductCommand(int Id) : ICommand<int>;
+public sealed record DeleteProductCommand(Guid Id) : ICommand<Guid>;

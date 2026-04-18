@@ -3,7 +3,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
 public sealed class LoggingPipelineBehavior<TRequest, TResponse>

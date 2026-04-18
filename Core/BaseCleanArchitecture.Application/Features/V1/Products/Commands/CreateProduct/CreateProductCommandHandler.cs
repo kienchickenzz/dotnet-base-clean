@@ -1,12 +1,12 @@
 ﻿namespace BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct;
 
 using BaseCleanArchitecture.Application.Common.Messaging;
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.Repositories;
 using BaseCleanArchitecture.Domain.AggregatesModels.Products;
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
-public sealed class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, int>
+public sealed class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, Guid>
 {
     private readonly IProductRepository _productRepository;
     public CreateProductCommandHandler(
@@ -16,7 +16,7 @@ public sealed class CreateProductCommandHandler : ICommandHandler<CreateProductC
         _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
     }
 
-    public async Task<Result<int>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         var product = Product.Create(
             request.Name,

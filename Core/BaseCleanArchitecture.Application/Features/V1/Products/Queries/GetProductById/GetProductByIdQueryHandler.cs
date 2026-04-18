@@ -7,12 +7,12 @@ namespace BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProd
 
 using Microsoft.EntityFrameworkCore;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.Repositories;
 using BaseCleanArchitecture.Application.Common.Messaging;
 using BaseCleanArchitecture.Application.Features.V1.Products.Extensions;
 using BaseCleanArchitecture.Application.Features.V1.Products.Models.Responses;
 using BaseCleanArchitecture.Domain.AggregatesModels.Products;
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
 public sealed class GetProductByIdQueryHandler : IQueryHandler<GetProductByIdQuery, ProductResponse>

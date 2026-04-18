@@ -1,6 +1,6 @@
 ﻿namespace BaseCleanArchitecture.Application.Common.Messaging;
 
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 using MediatR;
 

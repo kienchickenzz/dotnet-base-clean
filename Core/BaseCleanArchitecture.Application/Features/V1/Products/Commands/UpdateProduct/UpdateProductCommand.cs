@@ -4,7 +4,7 @@ using BaseCleanArchitecture.Application.Common.Messaging;
 
 
 public sealed record UpdateProductCommand(
-    int Id,
+    Guid Id,
     string Name,
     string? Description,
-    decimal Price) : ICommand<int>;
+    decimal Price) : ICommand<Guid>;

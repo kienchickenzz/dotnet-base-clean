@@ -1,7 +1,6 @@
 using BaseCleanArchitecture.Application;
 using BaseCleanArchitecture.Persistence;
 using BaseCleanArchitecture.Persistence.Initialization;
-using BaseCleanArchitecture.Api.Configurations;
 using BaseCleanArchitecture.Api.Extensions;
 using BaseCleanArchitecture.Api.OpenApi;
 
@@ -16,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddHttpContextAccessor();
 
-builder.AddConfigurations();
+// builder.AddConfigurations();
 builder.Host.UseSerilogFromSettings();
 
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();

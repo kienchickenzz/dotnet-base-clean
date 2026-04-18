@@ -3,5 +3,5 @@
 
 public interface IResponse
 {
-    public int Id { get; init; }
+    public Guid Id { get; init; }
 }

@@ -1,9 +1,9 @@
 ﻿namespace BaseCleanArchitecture.Domain.AggregatesModels.Products;
 
-using BaseCleanArchitecture.Domain.Common;
+using BaseCleanArchitecture.Domain.Primitives;
 
 
-public sealed class Product : BaseEntityRoot
+public sealed class Product : BaseEntity
 {
     private Product(
         string name,
