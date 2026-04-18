@@ -3,7 +3,7 @@
 using MediatR;
 using System.Transactions;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.DataAccess;
 
 
 public sealed class TransactionPipelineBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>

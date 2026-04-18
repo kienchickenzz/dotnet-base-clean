@@ -1,6 +1,6 @@
 ﻿namespace BaseCleanArchitecture.Persistence;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.DataAccess;
 using BaseCleanArchitecture.Application.Common.ApplicationServices.Repositories;
 
 using BaseCleanArchitecture.Persistence.Common;

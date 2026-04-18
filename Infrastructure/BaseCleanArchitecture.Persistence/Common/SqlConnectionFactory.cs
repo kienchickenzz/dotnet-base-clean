@@ -3,7 +3,7 @@
 using Microsoft.Data.SqlClient;
 using System.Data;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.DataAccess;
 
 
 internal sealed class SqlConnectionFactory : ISqlConnectionFactory

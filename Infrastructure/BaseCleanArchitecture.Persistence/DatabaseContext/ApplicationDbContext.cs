@@ -4,7 +4,7 @@ using BaseCleanArchitecture.Domain.Primitives;
 using BaseCleanArchitecture.Domain.Abstractions;
 using BaseCleanArchitecture.Domain.AggregatesModels.Products;
 
-using BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+using BaseCleanArchitecture.Application.Common.ApplicationServices.DataAccess;
 using BaseCleanArchitecture.Application.Common.Exceptions;
 
 using BaseCleanArchitecture.Persistence.Extentions;

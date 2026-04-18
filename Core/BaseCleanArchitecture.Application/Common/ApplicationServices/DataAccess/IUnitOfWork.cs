@@ -1,4 +1,4 @@
-namespace BaseCleanArchitecture.Application.Common.ApplicationServices.Persistence;
+namespace BaseCleanArchitecture.Application.Common.ApplicationServices.DataAccess;
 
 
 /// <summary>
