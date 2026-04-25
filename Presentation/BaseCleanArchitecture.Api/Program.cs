@@ -1,7 +1,11 @@
 using BaseCleanArchitecture.Application;
+
 using BaseCleanArchitecture.Persistence;
 using BaseCleanArchitecture.Persistence.Initialization;
+
 using BaseCleanArchitecture.Api.Extensions;
+using BaseCleanArchitecture.Api.Middlewares;
+using BaseCleanArchitecture.Api.BackgroundServices;
 using BaseCleanArchitecture.Api.OpenApi;
 
 
@@ -24,6 +28,9 @@ builder.Services.AddApplication();
 
 builder.Services.AddInfrastructurePersistence(builder.Configuration);
 
+// Performance monitoring background service
+builder.Services.AddHostedService<PerfMonitorService>();
+
 var app = builder.Build();
 
 // Initialize database (migrate + seed)
@@ -36,6 +43,9 @@ await app.Services.InitializeDatabaseAsync();
 // }
 
 app.UseSwaggerExtension();
+
+// Request tracking middleware (placed early to capture full request lifetime)
+app.UseMiddleware<RequestTrackingMiddleware>();
 
 app.UseRouting();
 // app.UseHttpsRedirection(); // Disable for dev

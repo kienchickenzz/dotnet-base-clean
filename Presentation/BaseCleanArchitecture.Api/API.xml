@@ -4,6 +4,38 @@
         <name>BaseCleanArchitecture.Api</name>
     </assembly>
     <members>
+        <member name="T:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService">
+            <summary>
+            Background service that emits CPU %, RAM MB, and active request counts every 60 seconds.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService._EmitSnapshot">
+            <summary>
+            Emits a performance snapshot to the logger.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService._MeasureCpu">
+            <summary>
+            Measures CPU usage using platform-specific method.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService._MeasureLinuxCpu">
+            <summary>
+            Reads /proc/stat for system-wide CPU usage (the only reliable source in containers).
+            Returns delta-based percentage since the previous call.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService._ReadLinuxCpuTimes(System.Int64@,System.Int64@)">
+            <summary>
+            Parses the first "cpu" line from /proc/stat.
+            Format: cpu  user nice system idle iowait irq softirq steal ...
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.BackgroundServices.PerfMonitorService._MeasureProcessCpu">
+            <summary>
+            Fallback for non-Linux (dev machines): rough per-process CPU estimate.
+            </summary>
+        </member>
         <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.GetProductPaginated(BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts.GetProductsQuery)">
             <summary>
             Get the paginated product list
@@ -60,6 +92,61 @@
             Defaults to "LoggerSettings".
             </param>
             <returns>The configured host builder for chaining.</returns>
+        </member>
+        <member name="T:BaseCleanArchitecture.Api.Middlewares.RequestTrackingMiddleware">
+            <summary>
+            Middleware that tracks active HTTP requests by category.
+            </summary>
+        </member>
+        <member name="F:BaseCleanArchitecture.Api.Middlewares.RequestTrackingMiddleware.IngestionSegments">
+            <summary>
+            URL segments that indicate ingestion operations.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Middlewares.RequestTrackingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Processes the request, tracking its lifecycle in the activity counter.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Middlewares.RequestTrackingMiddleware.Classify(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Classifies the request into Query, Ingestion, or None category.
+            </summary>
+        </member>
+        <member name="T:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter">
+            <summary>
+            Lock-free atomic counters for tracking in-flight HTTP requests.
+            </summary>
+        </member>
+        <member name="P:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.ActiveQueryRequests">
+            <summary>
+            Gets the current count of active query requests.
+            </summary>
+        </member>
+        <member name="P:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.ActiveIngestionRequests">
+            <summary>
+            Gets the current count of active ingestion requests.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.IncrementQuery">
+            <summary>
+            Increments the query request counter atomically.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.DecrementQuery">
+            <summary>
+            Decrements the query request counter atomically.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.IncrementIngestion">
+            <summary>
+            Increments the ingestion request counter atomically.
+            </summary>
+        </member>
+        <member name="M:BaseCleanArchitecture.Api.Monitoring.RequestActivityCounter.DecrementIngestion">
+            <summary>
+            Decrements the ingestion request counter atomically.
+            </summary>
         </member>
     </members>
 </doc>
