@@ -1,12 +1,12 @@
 <Solution>
-    <Folder Name="/Presentation/">
-        <Project Path="Presentation/BaseCleanArchitecture.Api/BaseCleanArchitecture.Api.csproj" />
+    <Folder Name="/src/Presentation/">
+        <Project Path="src/Presentation/BaseCleanArchitecture.Api/BaseCleanArchitecture.Api.csproj" />
     </Folder>
-    <Folder Name="/Core/">
-        <Project Path="Core/BaseCleanArchitecture.Application/BaseCleanArchitecture.Application.csproj" />
-        <Project Path="Core/BaseCleanArchitecture.Domain/BaseCleanArchitecture.Domain.csproj" />
+    <Folder Name="/src/Core/">
+        <Project Path="src/Core/BaseCleanArchitecture.Application/BaseCleanArchitecture.Application.csproj" />
+        <Project Path="src/Core/BaseCleanArchitecture.Domain/BaseCleanArchitecture.Domain.csproj" />
     </Folder>
-    <Folder Name="/Infrastructure/">
-        <Project Path="Infrastructure/BaseCleanArchitecture.Persistence/BaseCleanArchitecture.Persistence.csproj" />
+    <Folder Name="/src/Infrastructure/">
+        <Project Path="src/Infrastructure/BaseCleanArchitecture.Persistence/BaseCleanArchitecture.Persistence.csproj" />
     </Folder>
 </Solution>
